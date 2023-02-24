@@ -1,2 +1,2 @@
-# tarefas-ebac-maycon
-Tarefas Curso Java
+# Tarefas EBAC
+Tarefas do Curso Especialista Back-End Java
