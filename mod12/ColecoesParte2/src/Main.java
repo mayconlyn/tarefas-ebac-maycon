@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -9,6 +7,7 @@ public class Main {
 
         System.out.println("Digite nome-sexo separados por virgula (ex. Maycon-M,Camila-F)\n");
         String nomes = sc.nextLine();
+        Map<String, List<String>> listMap = new HashMap<>();
 
         List<String> masculino = new ArrayList<>();
         List<String> feminino = new ArrayList<>();
@@ -23,13 +22,25 @@ public class Main {
                 feminino.add(array2[0]);
         }
 
-        System.out.println("-- Nomes Masculinos --");
-        for(String nome : masculino)
-            System.out.println(nome);
+        listMap.put("M", masculino);
+        listMap.put("F", feminino);
 
-        System.out.println("-- Nomes Femininos -- ");
-        for(String nome : feminino)
-            System.out.println(nome);
+        imprimirNomePorSexo(listMap);
+
+    }
+
+    private static void imprimirNomePorSexo(Map<String, List<String>> listMap) {
+
+        List<String> masc = listMap.get("M");
+        List<String> fem = listMap.get("F");
+
+        System.out.println("--- Lista Masculino ---");
+        for(String aux : masc)
+            System.out.println(aux);
+
+        System.out.println("--- Lista Feminino ---");
+        for (String aux : fem)
+            System.out.println(aux);
 
     }
 
