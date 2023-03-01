@@ -35,12 +35,12 @@ public class Main {
         List<String> fem = listMap.get("F");
 
         System.out.println("--- Lista Masculino ---");
-        for(String aux : masc)
-            System.out.println(aux);
+       // masc.forEach(nome-> System.out.println(nome));
+        masc.forEach(System.out::println);
 
         System.out.println("--- Lista Feminino ---");
-        for (String aux : fem)
-            System.out.println(aux);
+       // fem.forEach(nome -> System.out.println(nome));
+        fem.forEach(System.out::println);
 
     }
 
